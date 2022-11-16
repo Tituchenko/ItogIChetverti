@@ -1,6 +1,7 @@
-﻿string[] firstArray=GetArray();
+string[] firstArray=GetArray();
+string[] resultArray=GetArratLessSymbol(firstArray,3);
+PrintResult (firstArray,resultArray);
 
-Console.WriteLine(string.Join(", ", firstArray));
 
 string [] GetArray ()
 {
@@ -22,7 +23,7 @@ string [] GetArray ()
     }
     else 
     {
-        return inputUser.Split(", ");
+        return inputUser.Split(";");
     }
 }
 
@@ -40,10 +41,7 @@ string [] GetRandomFromExamples ()
             return new string [] {"Russia","Denmark","Kazan"};
     }
     return new string [] {}; 
-﻿
-string [] test={"dff","43535","-2"};
-Console.WriteLine(String.Join(";",GetArratLessSymbol(test,3)));
-
+}
 string [] GetArratLessSymbol (string [] arr,int numSymb){
     string [] temp=new string [arr.Length];
     int count=0;
@@ -61,10 +59,7 @@ string [] GetArratLessSymbol (string [] arr,int numSymb){
         ret[i]=temp[i];
     }
     return ret;
-
-﻿string [] a={"1","4","dfdfdf"};
-string [] b={"1","4"};
-PrintResult (a,b);
+}
 
 void PrintResult (string [] arr, string [] res) {
     PrintArray (arr);
