@@ -20,7 +20,10 @@ string [] GetArray ()
         }
         return ret;
     }
-    return new string [] {};
+    else 
+    {
+        return inputUser.Split(", ");
+    }
 }
 
 
